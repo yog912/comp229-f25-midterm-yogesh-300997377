@@ -1,0 +1,15 @@
+{
+  "name": "comp229-midterm",
+  "version": "1.0.0",
+  "description": "COMP229 Midterm - Video Game Library API Project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Yogesh (300997377)",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}

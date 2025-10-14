@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>COMP229 Midterm – Games API</title>
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 24px; line-height: 1.6; }
+    code, pre { background: #f6f6f6; padding: 8px; border-radius: 6px; display: block; overflow-x: auto; }
+    h1 { margin-bottom: 0; } small { color: #666; }
+    ul { margin-top: 0; }
+  </style>
+</head>
+<body>
+  <h1>Games API</h1>
+  <small>Student: Yogesh (300997377)</small>
+
+  <h2>Endpoints</h2>
+  <ul>
+    <li><code>GET /api/games</code></li>
+    <li><code>GET /api/games/filter?genre=Action</code></li>
+    <li><code>GET /api/games/0</code></li>
+    <li><code>POST /api/games</code></li>
+    <li><code>PUT /api/games/:id</code></li>
+    <li><code>DELETE /api/games/:id</code></li>
+  </ul>
+
+  <h2>Quick Start</h2>
+  <pre>npm install
+npm start
+# visit http://localhost:3000</pre>
+
+  <h2>Sample cURL</h2>
+  <pre>curl -i http://localhost:3000/api/games
+curl -i "http://localhost:3000/api/games/filter?genre=rpg"
+curl -i http://localhost:3000/api/games/0
+curl -i -X POST http://localhost:3000/api/games \
+  -H "Content-Type: application/json" \
+  -d '{"title":"Hades","genre":"Roguelike","platform":"PC","year":2020,"developer":"Supergiant Games"}'
+curl -i -X PUT http://localhost:3000/api/games/6 \
+  -H "Content-Type: application/json" \
+  -d '{"title":"Baldur'\''s Gate 3","genre":"RPG","platform":"PC","year":2023,"developer":"Larian Studios"}'
+curl -i -X DELETE http://localhost:3000/api/games/6</pre>
+</body>
+</html>
